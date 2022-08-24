@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {StockOrder} from "src/app/model/stock.model";
+import { Stock } from  'src/app/model/api.response';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { ApiResponse } from 'src/app/model/api.response';
 import { StockServiceService } from 'src/app/service/stock-service.service';
+
 
 @Component({
   selector: 'app-portfolio',
@@ -13,7 +15,17 @@ import { StockServiceService } from 'src/app/service/stock-service.service';
 export class PortfolioComponent implements OnInit {
 
   constructor(private stockService:StockServiceService, private router: Router) { }
- ngOnInit(): void {
+  //myShares : any;
+  myPortfolio: Stock[] = []
+ 
+  ngOnInit(): void {
+   
+    
+     this.stockService.getStocks().subscribe((myPortfolio) => (this.myPortfolio = myPortfolio));
+
+    //this.myShares= [{"name":"A","price":5,"ticker":"avb","date":"a4fda","quantity":5},{"name":"A","price":5,"ticker":"avb","date":"a4fda","quantity":5}]
+
+  
      
  }
 

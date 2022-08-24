@@ -17,7 +17,7 @@
       "id" : 1,
       "stockTicker" : "INFY",
       "companyName" :"INFOSYS",
-      "averagePrice" : 30,
+      "avgPrice" : 30,
       "quantity" : 50
     }
   ]
