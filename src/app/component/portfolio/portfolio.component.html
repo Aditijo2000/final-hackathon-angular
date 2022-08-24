@@ -23,7 +23,11 @@
                         <td>{{elements.stockTicker}}</td>
                         
                         <td>{{elements.quantity}}</td>
-                        <td><button (click)="SellStock()" class='btn btn-primary'><i class="fa fa-futboll-0">Sell</i></button>
+                        <td>
+                            <!-- <button (click)="SellStock()" class='btn btn-primary'><i class="fa fa-futboll-0">Sell</i>
+                            </button> -->
+                            <button mat-raised-button (click)="sellStock(elements)" class='btn btn-info' >Sell</button>  
+                        </td>
                        
                     </tr>   
                     
@@ -32,7 +36,26 @@
         </table>
 
     </div>
+
+    
     <p *ngIf="!myPortfolio" class="noData">
         There are No Shares in your Account
     </p>
   </div> 
+
+  <!-- <mat-card>
+    <mat-card-header>
+        <mat-card-title>Example Login Form</mat-card-title>
+    </mat-card-header>
+        <mat-card-content>
+      
+        <form>
+           
+            <mat-form-field>
+                <input type="text" class="form-control" id="quantity" required [(ngModel)]="stockOrder.quantity" name="quantity">
+            </mat-form-field>
+        </form>
+        </mat-card-content> -->
+
+  
+  

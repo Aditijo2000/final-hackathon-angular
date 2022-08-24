@@ -56,6 +56,12 @@
       "price": "33",
       "quantity": "445",
       "id": 5
+    },
+    {
+      "stockTicker": "dd55",
+      "price": "336",
+      "quantity": "445",
+      "id": 6
     }
   ]
 }

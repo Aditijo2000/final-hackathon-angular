@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { StockOrder } from 'src/app/model/stock.model';
 import { StockServiceService } from 'src/app/service/stock-service.service';
 
+
 @Component({
   selector: 'app-create-stock-order',
   templateUrl: './create-stock-order.component.html',
@@ -18,6 +19,8 @@ export class CreateStockOrderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
   onSubmit(){
 
     this.submitted = true;

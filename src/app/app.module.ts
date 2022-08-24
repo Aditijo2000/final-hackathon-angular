@@ -11,6 +11,13 @@ import { PortfolioComponent } from './component/portfolio/portfolio.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { TransactionsComponent } from './component/transactions/transactions.component';
 
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatDialogModule } from '@angular/material/dialog';
+import { PopUpComponent } from './component/pop-up/pop-up.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +26,11 @@ import { TransactionsComponent } from './component/transactions/transactions.com
     NavbarComponent,
     PortfolioComponent,
     PortfolioComponent,
-    TransactionsComponent
+    TransactionsComponent,
+    PopUpComponent
+  ],
+  entryComponents:[
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +39,7 @@ import { TransactionsComponent } from './component/transactions/transactions.com
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatDialogModule, MatInputModule, MatButtonModule, MatCardModule, MatFormFieldModule
   ],
   providers: [StockServiceService],
   bootstrap: [AppComponent]

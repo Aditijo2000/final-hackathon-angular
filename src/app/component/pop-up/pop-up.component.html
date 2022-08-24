@@ -1,0 +1,25 @@
+
+<h2> Sell </h2>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <h3 for="name" >{{stockOrder.stockTicker}}</h3>
+      <!-- <input type="text" class="form-control" id="stockTicker" required [(ngModel)]="stockOrder.stockTicker" name="stockTicker"> -->
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="name">Price</label>
+      <input type="text" class="form-control" id="price" required [(ngModel)]="stockOrder.price" name="price">
+    </div> -->
+
+       
+   
+    <div class="form-group">
+      <label for="name">Quantity </label>
+      <input type="number" min="1" max="{{stockOrder.quantity}}" class="form-control" id="volume" required [(ngModel)]="stockOrder.quantity" name="volume">
+    </div>
+    <br><br>
+
+    <button class="btn btn-success">Submit</button>
+  </form>
+</div>
