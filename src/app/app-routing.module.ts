@@ -6,6 +6,7 @@ const routes: Routes = [
     { path: '', redirectTo: 'stockOrder', pathMatch: 'full' },
     { path: 'add', component: CreateStockOrderComponent },
     { path: 'portfolio', component: PortfolioComponent },
+    
 
     
   ];

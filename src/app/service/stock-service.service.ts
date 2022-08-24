@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from "rxjs/index";
-import { ApiResponse } from '../model/api.response';
+
 import { StockOrder} from '../model/stock.model';
+import { ApiResponse, Stock } from '../model/api.response';
+
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -15,10 +17,12 @@ export class StockServiceService {
   private baseUrl: string = environment.baseUrl +'/api/stockOrder/';
 
   
-
-  getStocks() : Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(this.baseUrl);
+  getStocks() : Observable<Stock[]> {
+    const url = 'http://localhost:5000/portfolio/'
+    return  this.http.get<Stock[]>(url);
   }
+
+  
 
   getTransactions(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(this.baseUrl);
