@@ -7,14 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { StockServiceService } from './service/stock-service.service';
 import { NavbarComponent } from './component/navbar/navbar.component';
-import { MySharesComponent } from './component/my-shares/my-shares.component';
+import { PortfolioComponent } from './component/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateStockOrderComponent,
     NavbarComponent,
-    MySharesComponent
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
