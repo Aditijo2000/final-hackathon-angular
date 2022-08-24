@@ -20,6 +20,10 @@ export class StockServiceService {
     return this.http.get<ApiResponse>(this.baseUrl);
   }
 
+  getTransactions(): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(this.baseUrl);
+  }
+
   getStockOrderById(id: number): Observable<any> {
     return this.http.get(this.baseUrl + id);
   }
