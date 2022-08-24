@@ -1,4 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
+import {StockOrder} from "src/app/model/stock.model";
+import { Stock } from  'src/app/model/api.response';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { ApiResponse } from 'src/app/model/api.response';
+import { StockServiceService } from 'src/app/service/stock-service.service';
+import { Transaction } from 'src/app/model/transaction.model';
 
 @Component({
   selector: 'app-transactions',
@@ -7,17 +15,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionsComponent implements OnInit {
 
-  constructor() { }
-  myOrders: any;
+  constructor(private stockService:StockServiceService, private router: Router) { }
+  myOrders: Transaction[] = [];
 
   ngOnInit(): void {
-    this.myOrders = [
-      { "name": "CITI", "price": 5, "ticker": "citi", "quantity": 5,"action":0, "status": '0', "date": "28-06-2022" },
-      { "name": "Microsoft", "price": 15, "ticker": "msft","action":1,"quantity": 15, "status": '0', "date": "21-06-2022" }
-    ]
+    this.stockService.getTransactions().subscribe((myOrders) => (this.myOrders = myOrders));
 
 
 
   }
 
 }
+
+ 
