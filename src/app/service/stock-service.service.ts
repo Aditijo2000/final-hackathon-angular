@@ -16,7 +16,7 @@ export class StockServiceService {
 
   
 
-  getEmployees() : Observable<ApiResponse> {
+  getStocks() : Observable<ApiResponse> {
     return this.http.get<ApiResponse>(this.baseUrl);
   }
 

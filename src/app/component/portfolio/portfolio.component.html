@@ -13,10 +13,19 @@
             <th >Price</th>
             <th >Quantity</th>
             <!-- <th >Status</th> -->
+
            
           </tr>
         </thead>
         <tbody>
+            <tr *ngFor = "let entry of portfolioEntries |async">
+
+                <td>{{entry.stockTicker}}</td>
+                <td>{{entry.Company}}</td>
+                <td>{{entry.Price}}</td>
+                <td>{{entry.Quantity}}</td>
+
+            </tr>
           
         </tbody>
       </table>
