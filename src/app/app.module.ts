@@ -6,11 +6,13 @@ import { CreateStockOrderComponent } from './component/create-stock-order/create
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { StockServiceService } from './service/stock-service.service';
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateStockOrderComponent
+    CreateStockOrderComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
