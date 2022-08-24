@@ -12,9 +12,13 @@ import { StockServiceService } from 'src/app/service/stock-service.service';
 })
 export class PortfolioComponent implements OnInit {
 
+  
+  portfolioEntries: Observable<ApiResponse>;
+  
+
   constructor(private stockService:StockServiceService, private router: Router) { }
  ngOnInit(): void {
-     
+     this.portfolioEntries=this.stockService.getStocks();
  }
 
 }
