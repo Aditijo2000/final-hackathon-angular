@@ -12,8 +12,11 @@ export class TransactionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.myOrders = [
-      { "name": "CITI", "price": 5, "ticker": "citi", "quantity": 5,"action":0, "status": '0', "date": "28-06-2022" },
-      { "name": "Microsoft", "price": 15, "ticker": "msft","action":1,"quantity": 15, "status": '0', "date": "21-06-2022" }
+      { "name": "CITI", "price": 5, "ticker": "citi", "quantity": 5,"action":0, "status": '1', "date": "28-06-2022" },
+      { "name": "Microsoft", "price": 15, "ticker": "msft","action":1,"quantity": 15, "status": '0', "date": "21-06-2022" },
+      { "name": "CITI", "price": 5, "ticker": "citi", "quantity": 5,"action":0, "status": '3', "date": "28-06-2022" },
+      { "name": "CITI", "price": 5, "ticker": "citi", "quantity": 5,"action":0, "status": '2', "date": "28-06-2022" },
+
     ]
 
 
