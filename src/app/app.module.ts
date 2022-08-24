@@ -6,11 +6,14 @@ import { CreateStockOrderComponent } from './component/create-stock-order/create
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { StockServiceService } from './service/stock-service.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PortfolioComponent } from './component/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateStockOrderComponent
+    CreateStockOrderComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +21,7 @@ import { StockServiceService } from './service/stock-service.service';
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [StockServiceService],
   bootstrap: [AppComponent]
