@@ -6,7 +6,7 @@
                 <thead class="thead-light">
                 <tr>
                     <th>Company Name</th>
-                    <th>Bought Rate</th>
+                    <th>Price</th>
                     <th>Ticker</th>
                     <th> Date</th>
                     <th>Quantity</th>
@@ -20,7 +20,7 @@
                 <tbody>
                     <tr *ngFor="let elements of myShares">
                         <td>{{elements.name}}</td>
-                        <td><b>{{elements.bought_rate}}</b></td>
+                        <td><b>{{elements.price}}</b></td>
                         <td>{{elements.ticker}}</td>
                         <td>{{elements.Date}}</td>
                         <td>{{elements.quantity}}</td>

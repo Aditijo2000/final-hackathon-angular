@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {StockOrder} from "src/app/model/stock.model";
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { ApiResponse } from 'src/app/model/api.response';
+import { StockServiceService } from 'src/app/service/stock-service.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -7,13 +12,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { 
-  }
+  constructor(private stockService:StockServiceService, private router: Router) { }
   myShares: any;
 
   ngOnInit(): void {
      this.myShares= []
-
-  }
+     
+ }
 
 }
