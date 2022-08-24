@@ -5,6 +5,7 @@
         <table class="table table-borderles table-hover">
                 <thead class="thead-light">
                 <tr>
+                    <th></th>
                     <th>Company Name</th>
                     <th>Ticker</th>
                     <th>Date</th>
@@ -18,14 +19,15 @@
                 </thead>
 
                 <tbody>
-                    <tr *ngFor="let elements of myOrders">
-                        <td>{{elements.name}}</td>
-                        <td>{{elements.ticker}}</td>
+                    <tr *ngFor="let elements of myOrders; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{elements.companyName}}</td>
+                        <td>{{elements.stockTicker}}</td>
                         <td>{{elements.date}}</td>
                         <td>{{!elements.action?"Buy":"Sell"}}</td>
                         <td><b>{{elements.price}}</b></td>
                         <td>{{elements.quantity}}</td>
-                        <td>{{elements.status}}</td>
+                        <td>{{elements.status==0?"Initial State":elements.status==1?"Processing":elements.status==2?"Completed":"Failed"}}</td>
 
                        
                     </tr>   

@@ -7,6 +7,7 @@ import { StockOrder} from '../model/stock.model';
 
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Transaction } from '../model/transaction.model';
 @Injectable({
   providedIn: 'root'
 })
@@ -21,9 +22,9 @@ export class StockServiceService {
  
   
 
-  getTransactions(): Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(this.baseUrl);
-  }
+  // getTransactions(): Observable<ApiResponse> {
+  //   return this.http.get<ApiResponse>(this.baseUrl);
+  // }
 
   getStockOrderById(id: number): Observable<any> {
     return this.http.get(this.baseUrl + id);
@@ -37,5 +38,11 @@ export class StockServiceService {
   getStocks() : Observable<Stock[]> {
     const url = 'http://localhost:5000/portfolio/'
     return  this.http.get<Stock[]>(url);
+  }
+
+  getTransactions() : Observable<Transaction[]> {
+    const url = 'http://localhost:5000/transactions/'
+    return  this.http.get<Transaction[]>(url);
+
   }
 }
