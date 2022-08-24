@@ -50,11 +50,12 @@
       "price": "336",
       "quantity": "445",
       "id": 4
+    },
+    {
+      "stockTicker": "dd55",
+      "price": "33",
+      "quantity": "445",
+      "id": 5
     }
-  ],
-
-  "transactions" :  [
-    { "companyName": "CITI", "price": 5, "stockTicker": "citi", "quantity": 5,"action":0, "status": 0, "date": "28-06-2022" },
-    { "companyName": "Microsoft", "price": 15, "stockTicker": "msft","action":1,"quantity": 15, "status": 0, "date": "21-06-2022" }
   ]
 }
