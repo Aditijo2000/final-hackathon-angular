@@ -1,0 +1,14 @@
+{
+  "stocks":[
+      {
+          "id" : 1,
+          "stockTicker" : "INFY",
+          "price" : 50,
+          "volume" : 100,
+          "buyOrSell" : "buy",
+          "statusCode" : 1 
+          
+  
+      }
+  ]
+}
