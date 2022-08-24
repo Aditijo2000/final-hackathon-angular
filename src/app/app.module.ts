@@ -9,8 +9,8 @@ import { StockServiceService } from './service/stock-service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './component/portfolio/portfolio.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { TransactionsComponent } from './component/transactions/transactions.component';
 
-import { TransactionComponent } from './component/transaction/transaction.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { TransactionComponent } from './component/transaction/transaction.compon
     NavbarComponent,
     PortfolioComponent,
     PortfolioComponent,
-    TransactionComponent
+    TransactionsComponent
   ],
   imports: [
     BrowserModule,
