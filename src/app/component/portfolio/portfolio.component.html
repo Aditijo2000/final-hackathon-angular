@@ -1,12 +1,12 @@
 <div class="heading">
 
-    <div *ngIf="myShares" class="table-responsive-md " id=""> 
+    <div *ngIf="myPortfolio" class="table-responsive-md " id=""> 
         <h2>My Shares</h2> <br>    
         <table class="table table-borderles table-hover">
                 <thead class="thead-light">
                 <tr>
                     <th>Company Name</th>
-                    <th>Avg. Price</th>
+                    <th>Average Price</th>
                     <th>Ticker</th>
                     <th>Quantity</th>
             
@@ -15,21 +15,21 @@
                     <th></th>
                 </tr>
                 </thead>
-
+  
                 <tbody>
-                    <tr *ngFor="let elements of myShares">
-                        <td>{{elements.name}}</td>
-                        <td><b>{{elements.price}}</b></td>
-                        <td>{{elements.ticker}}</td>
-                        <td>{{elements.Date}}</td>
+                    <tr *ngFor="let elements of myPortfolio">
+                        <td>{{elements.companyName}}</td>
+                        <td><b>{{elements.avgPrice}}</b></td>
+                        <td>{{elements.stockTicker}}</td>
                         <td>{{elements.quantity}}</td>
                        
                     </tr>   
                     
+                  
                 </tbody>
         </table>
     </div>
-    <p *ngIf="!myShares" class="noData">
+    <p *ngIf="!myPortfolio" class="noData">
         There are No Shares in your Account
     </p>
-</div> 
+  </div> 
