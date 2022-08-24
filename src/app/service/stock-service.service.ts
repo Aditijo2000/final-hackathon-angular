@@ -1,27 +1,24 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import {Observable} from "rxjs/index";
 
-import { StockOrder} from '../model/stock.model';
+import {Observable} from "rxjs/index";
 import { ApiResponse, Stock } from '../model/api.response';
+import { StockOrder} from '../model/stock.model';
+
 
 import { environment } from 'src/environments/environment';
-
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class StockServiceService {
-
-  
-  constructor(private http: HttpClient) { }
-  private baseUrl: string = environment.baseUrl +'/api/stockOrder/';
-
-  
-  getStocks() : Observable<Stock[]> {
-    const url = 'http://localhost:5000/portfolio/'
-    return  this.http.get<Stock[]>(url);
+  private baseUrl = 'http://localhost:5000/'
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type':'application/json'})
   }
+  constructor(private http: HttpClient) { }
+  
 
+ 
   
 
   getTransactions(): Observable<ApiResponse> {
@@ -34,5 +31,10 @@ export class StockServiceService {
 
   createStockOrder(stockOrder: StockOrder): Observable<ApiResponse> {
     return this.http.post<ApiResponse>(this.baseUrl, stockOrder);
+  }
+
+  getStocks() : Observable<Stock[]> {
+    const url = 'http://localhost:5000/portfolio/'
+    return  this.http.get<Stock[]>(url);
   }
 }

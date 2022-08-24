@@ -1,0 +1,39 @@
+<div class="heading">
+
+    <div *ngIf="myOrders" class="table-responsive-md " id=""> 
+        <h2>My Orders</h2> <br>    
+        <table class="table table-borderles table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th>Company Name</th>
+                    <th>Ticker</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th> Status</th>
+            
+                   
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let elements of myOrders">
+                        <td>{{elements.name}}</td>
+                        <td>{{elements.ticker}}</td>
+                        <td>{{elements.date}}</td>
+                        <td>{{!elements.action?"Buy":"Sell"}}</td>
+                        <td><b>{{elements.price}}</b></td>
+                        <td>{{elements.quantity}}</td>
+                        <td>{{elements.status}}</td>
+
+                       
+                    </tr>   
+                    
+                </tbody>
+        </table>
+    </div>
+    <p *ngIf="!myOrders" class="noData">
+        There are No Orders in your Account
+    </p>
+</div> 
