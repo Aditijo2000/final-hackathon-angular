@@ -1,5 +1,5 @@
 {
-  "stocks":[
+  "stocks_list":[
       {
           "id" : 1,
           "stockTicker" : "INFY",
@@ -10,5 +10,17 @@
           
   
       }
+  ],
+
+  "portfolio": [
+    {
+      "id" : 1,
+      "stockTicker" : "INFY",
+      "companyName" :"INFOSYS",
+      "averagePrice" : 30,
+      "quantity" : 50
+    }
   ]
+
+
 }
