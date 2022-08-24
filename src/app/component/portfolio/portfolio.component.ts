@@ -16,7 +16,7 @@ export class PortfolioComponent implements OnInit {
   myShares: any;
 
   ngOnInit(): void {
-     this.myShares= []
+     this.myShares= [{"name":"A","price":5,"ticker":"avb","quantity":5},{"name":"A","price":5,"ticker":"avb","quantity":5}]
      
  }
 
