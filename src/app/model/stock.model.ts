@@ -1,12 +1,14 @@
 export class StockOrder {
     
-    id!: number;
-    stockTicker!: string;
+    companyName!: string;
     price!: number;
-    volume!: number;
-    buyOrSell!: string;
-    statusCode! : number;
+    stockTicker!: string;
+    quantity!: number;
+    action!: string;
+    status!: number;
+    date!: string
     
 
 
 }
+

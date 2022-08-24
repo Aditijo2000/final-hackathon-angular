@@ -11,13 +11,24 @@
       <input type="text" class="form-control" id="price" required [(ngModel)]="stockOrder.price" name="price">
     </div>
 
-    <div class="form-group">
+    <div class="form-group">  
+      <label for="branch">Buy/Sell</label>  
+        <select class="form-control"  data-toggle="tooltip"  id="buyOrSell" 
+              data-placement="right" title="Select Action">  
+            <option value="null">--Select Action--</option>  
+          <option value="Buy" [selected]="'B-Tech' == stockOrder.action" >Buy</option>  
+          <option value="Sell" [selected]="'B-Tech' == stockOrder.action">Sell</option>  
+           
+        </select>  
+  </div>  
+    
+    <!-- <div class="form-group">
       <label for="name">Buy/Sell</label>
-      <input type="text" class="form-control" id="buyOrSell" required [(ngModel)]="stockOrder.buyOrSell" name="buyOrSell">
-    </div>
+      <input type="text" class="form-control" id="buyOrSell" required [(ngModel)]="stockOrder.action" name="buyOrSell">
+    </div> -->
     <div class="form-group">
-      <label for="name">Volume</label>
-      <input type="text" class="form-control" id="volume" required [(ngModel)]="stockOrder.volume" name="volume">
+      <label for="name">Quantity</label>
+      <input type="text" class="form-control" id="volume" required [(ngModel)]="stockOrder.quantity" name="volume">
     </div>
 
     <button class="btn btn-success">Submit</button>

@@ -11,7 +11,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class StockServiceService {
-  private baseUrl = 'http://localhost:5000/'
+  private baseUrl = 'http://localhost:5000/transactions'
   httpOptions = {
     headers: new HttpHeaders({'Content-Type':'application/json'})
   }
@@ -30,6 +30,7 @@ export class StockServiceService {
   }
 
   createStockOrder(stockOrder: StockOrder): Observable<ApiResponse> {
+   console.log(stockOrder);
     return this.http.post<ApiResponse>(this.baseUrl, stockOrder);
   }
 

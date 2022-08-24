@@ -25,7 +25,7 @@ export class CreateStockOrderComponent implements OnInit {
     this.stockService.createStockOrder(this.stockOrder)
     .subscribe(data => console.log(data), error => console.log(error));
     this.stockOrder = new StockOrder();
-    this.router.navigate(['/stockOrder']);
+    //this.router.navigate(['/stockOrder']);
   }
 
 }

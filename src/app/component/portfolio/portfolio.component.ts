@@ -26,13 +26,22 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
    
     
-     this.stockService.getStocks().subscribe((myPortfolio) => (this.myPortfolio = myPortfolio));
+    // this.stockService.getStocks().subscribe((myPortfolio) => (this.myPortfolio = myPortfolio));
 
-    //this.myShares= [{"name":"A","price":5,"ticker":"avb","quantity":5},{"name":"A","price":5,"ticker":"avb","quantity":5}{"name":"A","price":5,"ticker":"avb","date":"a4fda","quantity":5},{"name":"A","price":5,"ticker":"avb","date":"a4fda","quantity":5}]
-
+    this.myPortfolio = [
+      { "id" : 1,"companyName": "CITI","avgPrice": 33,  "stockTicker": "citi", "quantity": 5 }
+    ]
   
-     
+    
+}
+
+
+SellStock(){
+
+}
  }
 
 
-}
+ 
+
+
