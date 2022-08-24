@@ -8,11 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { StockServiceService } from './service/stock-service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './component/portfolio/portfolio.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateStockOrderComponent,
+    NavbarComponent,
+    PortfolioComponent,
     PortfolioComponent
   ],
   imports: [
