@@ -4,7 +4,6 @@ import { PortfolioComponent } from './portfolio.component';
 import { StockServiceService } from 'src/app/service/stock-service.service';
 import { of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
-import { Dialog } from '@angular/cdk/dialog';
 
 let matDialogService: jasmine.SpyObj<MatDialog>;
 matDialogService = jasmine.createSpyObj<MatDialog>('MatDialog', ['open']);
