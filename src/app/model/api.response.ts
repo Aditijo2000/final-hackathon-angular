@@ -5,9 +5,11 @@ export class ApiResponse{
 }
 
 export interface Stock {
-    id: number,
+    //id: number,
     stockTicker: string,
     companyName: string,
     avgPrice: number,
     quantity: number
+    action: string,
+    date: string
 }

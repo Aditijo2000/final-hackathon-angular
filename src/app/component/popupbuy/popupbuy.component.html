@@ -1,5 +1,5 @@
 
-<h2> Sell </h2>
+<h2> Buy </h2>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -18,7 +18,7 @@
    
     <div class="form-group">
       <label for="name">Quantity </label>
-      <input type="number" min="1" max="{{availableStock}}" class="form-control" id="volume" required [(ngModel)]="stockOrder.quantity" name="volume">
+      <input type="number" min="1" class="form-control" id="volume" required [(ngModel)]="stockOrder.quantity" name="volume">
     </div>
     <br><br>
 
