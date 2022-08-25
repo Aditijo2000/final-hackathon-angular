@@ -103,7 +103,6 @@
       "id": 13
     },
     {
-<<<<<<< HEAD
       "stockTicker": "INFY",
       "quantity": 50,
       "companyName": "INFOSYS",
@@ -224,44 +223,6 @@
       "date": "2022-08-25",
       "price": 889.3599853515625,
       "id": 28
-=======
-      "stockTicker": "testin",
-      "price": "22",
-      "quantity": "5",
-      "id": 14
-    },
-    {
-      "stockTicker": "fdbfhhhh",
-      "price": "22",
-      "quantity": "5",
-      "id": 15
-    },
-    {
-      "stockTicker": "fdbf",
-      "price": "22",
-      "quantity": "5",
-      "id": 16
-    },
-    {
-      "stockTicker": "fdbfhhhh",
-      "price": "224",
-      "quantity": "5",
-      "id": 17
-    },
-    {
-      "stockTicker": "fdbf",
-      "price": "22",
-      "quantity": "5",
-      "id": 18
-    },
-    {
-      "stockTicker": "testing push",
-      "price": "22",
-      "quantity": "5",
-      "date": "abcg",
-      "action": "Buy",
-      "id": 19
->>>>>>> 610bcadefcc8b379fe8cde4af98f3296782581b8
     }
   ]
 }
