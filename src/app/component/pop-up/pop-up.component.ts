@@ -11,11 +11,13 @@ import { StockOrder } from 'src/app/model/stock.model';
 export class PopUpComponent implements OnInit {
 
   stockOrder: StockOrder = new StockOrder();
-
+  availableStock!: number;
   submitted = false;
   constructor(@Inject(MAT_DIALOG_DATA) public data : any) { 
     this.stockOrder.stockTicker = data.stockTicker;
     this.stockOrder.quantity = data.quantity;
+    this.stockOrder.companyName = data.companyName;
+    this.availableStock = data.quantity;
     
   }
 

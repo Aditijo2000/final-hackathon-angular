@@ -4,6 +4,7 @@
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <h3 for="name" >{{stockOrder.stockTicker}}</h3>
+      <h4 for="name" >Company : {{stockOrder.companyName}}</h4>
       <!-- <input type="text" class="form-control" id="stockTicker" required [(ngModel)]="stockOrder.stockTicker" name="stockTicker"> -->
     </div>
 
@@ -16,7 +17,7 @@
    
     <div class="form-group">
       <label for="name">Quantity </label>
-      <input type="number" min="1" max="{{stockOrder.quantity}}" class="form-control" id="volume" required [(ngModel)]="stockOrder.quantity" name="volume">
+      <input type="number" min="1" max="{{availableStock}}" class="form-control" id="volume" required [(ngModel)]="stockOrder.quantity" name="volume">
     </div>
     <br><br>
 
