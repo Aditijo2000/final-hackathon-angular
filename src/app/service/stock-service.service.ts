@@ -32,7 +32,7 @@ export class StockServiceService {
 
   createStockOrder(stockOrder: StockOrder): Observable<ApiResponse> {
    console.log(stockOrder);
-    return this.http.post<ApiResponse>(this.baseUrl+"savetransactions", stockOrder);
+    return this.http.post<ApiResponse>(this.baseUrl+"savetransaction", stockOrder);
   }
 
   getStocks() : Observable<Stock[]> {
