@@ -1,15 +1,13 @@
-import { formatDate } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { StockOrder } from 'src/app/model/stock.model';
 
-
 @Component({
-  selector: 'app-pop-up',
-  templateUrl: './pop-up.component.html',
-  styleUrls: ['./pop-up.component.css']
+  selector: 'app-popupbuy',
+  templateUrl: './popupbuy.component.html',
+  styleUrls: ['./popupbuy.component.css']
 })
-export class PopUpComponent implements OnInit {
+export class PopupbuyComponent implements OnInit {
 
   stockOrder: StockOrder = new StockOrder();
   availableStock!: number;
@@ -27,6 +25,7 @@ export class PopUpComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
   onSubmit(){
 

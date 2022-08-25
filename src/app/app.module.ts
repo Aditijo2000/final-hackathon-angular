@@ -17,6 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule } from '@angular/material/dialog';
 import { PopUpComponent } from './component/pop-up/pop-up.component';
+import { PopupbuyComponent } from './component/popupbuy/popupbuy.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PopUpComponent } from './component/pop-up/pop-up.component';
     PortfolioComponent,
     PortfolioComponent,
     TransactionsComponent,
-    PopUpComponent
+    PopUpComponent,
+    PopupbuyComponent
   ],
   entryComponents:[
     PopUpComponent

@@ -8,6 +8,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 import { MatDialog } from '@angular/material/dialog';
 import { PopUpComponent } from '../pop-up/pop-up.component';
+import { formatDate } from '@angular/common';
+import { PopupbuyComponent } from '../popupbuy/popupbuy.component';
 
 @Component({
   selector: 'app-portfolio',
@@ -44,9 +46,23 @@ export class PortfolioComponent implements OnInit {
  sellStock(stock: Stock){
 
   console.log(stock);
+  stock.action = "SELL";
+  const currentDate = new Date();
+
+  stock.date = formatDate(currentDate, 'yyyy-MM-dd', 'en-US');
   this.dialog.open(PopUpComponent, { data: stock});
 }
 
+
+buyStock(stock: Stock){
+
+  console.log(stock);
+  stock.action = "SELL";
+  const currentDate = new Date();
+
+  stock.date = formatDate(currentDate, 'yyyy-MM-dd', 'en-US');
+  this.dialog.open(PopupbuyComponent, { data: stock});
+}
 changeisUpdate(){  
   this.isSold=false;  
 } 
