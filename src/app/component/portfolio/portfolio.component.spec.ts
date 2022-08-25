@@ -55,8 +55,8 @@ describe('PortfolioComponent', () => {
 
   });
 
-  it('should have 2 buttons inside table', () => {
-    expect(fixture.nativeElement.querySelectorAll('table button').length).toBe(2);
+  it('should have 4 buttons inside table', () => {
+    expect(fixture.nativeElement.querySelectorAll('table button').length).toBe(4);
   });
 
   it('should load popup component when button is clicked', fakeAsync(() => {
