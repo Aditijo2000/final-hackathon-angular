@@ -101,6 +101,128 @@
       "price": "336",
       "quantity": "445",
       "id": 13
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "id": 14
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 15
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 16
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 17
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 18
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 19
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 20
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 21
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 22
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 23
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 24
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "id": 25
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "price": 889.3599853515625,
+      "id": 26
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "price": 889.3599853515625,
+      "id": 27
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "price": 889.3599853515625,
+      "id": 28
     }
   ]
 }

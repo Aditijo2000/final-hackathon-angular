@@ -13,3 +13,5 @@ export interface Stock {
     action: string,
     date: string
 }
+
+
