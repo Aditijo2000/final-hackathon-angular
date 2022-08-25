@@ -8,7 +8,14 @@ export class StockOrder {
     status!: number;
     date!: string
     
-
-
+}
+export class Stock {
+   
+    stockTicker!: string;
+    companyName!: string;
+    avgPrice!: number;
+    quantity!: number;
+    action!: string;
+    date!: string;
 }
 
