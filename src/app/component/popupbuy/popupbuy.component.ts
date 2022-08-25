@@ -26,6 +26,8 @@ export class PopupbuyComponent implements OnInit {
     this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
       this.currentPrice = data;
       this.stockOrder.price = this.currentPrice.price_data[0].value;
+      
+      
       });
     
   }

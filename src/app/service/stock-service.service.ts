@@ -7,11 +7,12 @@ import { StockOrder} from '../model/stock.model';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Transaction } from '../model/transaction.model';
+import { environment } from 'src/environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
 export class StockServiceService {
-  private baseUrl = 'http://finalprojectbackend-finalprojectbackend.icgpune1-linux4.conygre.com/'
+  private baseUrl = environment.baseUrl;
   
   httpOptions = {
     headers: new HttpHeaders({'Content-Type':'application/json'})
@@ -27,7 +28,7 @@ export class StockServiceService {
   // }
   getTicker()
   {
-    console.log("Inside method ticker");
+    console.log("Insidemethod ticker");
     return this.http.get('https://v588nmxc10.execute-api.us-east-1.amazonaws.com/default/tickerList'); 
 
   }

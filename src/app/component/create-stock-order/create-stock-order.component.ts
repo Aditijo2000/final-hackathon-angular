@@ -50,10 +50,12 @@ export class CreateStockOrderComponent implements OnInit {
     this.submitted = true;
     this.stockOrder.action = this.action; 
     this.stock.stockTicker = this.stockOrder.stockTicker
+    console.log(this.stockOrder.stockTicker);
 
     for(var i = 0; i < this.stocksList.length; i++) {
       if(this.stock.stockTicker == this.stocksList[i].symbol) {
         this.stock.companyName = this.stocksList[i].name;
+        this.stockOrder.companyName = this.stock.companyName;
       }
     }
     

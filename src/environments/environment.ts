@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://icgpune1-linux4.conygre.com:8081/'
+ 
 };
 
 /*
