@@ -47941,10 +47941,4 @@ export const stocksList: NumberArray = [
     country: "United States",
     industry: "Biotechnology: Pharmaceutical Preparations"
     },
-    {
-    symbol: "ZYXI",
-    name: "Zynex Inc. Common Stock",
-    country: "United States",
-    industry: "Biotechnology: Electromedical & Electrotherapeutic Apparatus"
-    }
-    ]
+]   

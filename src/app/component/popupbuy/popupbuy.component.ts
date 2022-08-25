@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ɵɵqueryRefresh } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { StockOrder } from 'src/app/model/stock.model';
@@ -39,5 +39,12 @@ export class PopupbuyComponent implements OnInit {
   onSubmit(){
     this.stockService.createStockOrder(this.stockOrder)
     .subscribe(data => console.log(data), error => console.log(error));
+    
+   
+       this.router.navigateByUrl('/portfolio');
+      location.reload();
+      
+    
+    
   }
 }

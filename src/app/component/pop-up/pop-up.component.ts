@@ -42,7 +42,11 @@ export class PopUpComponent implements OnInit {
     this.stockService.createStockOrder(this.stockOrder)
     .subscribe(data => console.log(data), error => console.log(error));
     
+    this.router.navigateByUrl('/portfolio');
+    location.reload();
     
+    
+
     
   
   }
