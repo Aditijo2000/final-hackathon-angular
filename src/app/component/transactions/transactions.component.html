@@ -1,6 +1,6 @@
 <div class="heading">
 
-    <div *ngIf="myOrders" class="table-responsive-md " id=""> 
+    <div *ngIf="myOrders && myOrders.length>0" class="table-responsive-md " id=""> 
         <h2>My Orders</h2> <br>    
         <table class="table table-borderles table-hover">
                 <thead class="thead-light">
@@ -35,7 +35,7 @@
                 </tbody>
         </table>
     </div>
-    <p *ngIf="!myOrders" class="noData">
+    <p *ngIf="!myOrders ||myOrders.length==0" class="noData">
         There are No Orders in your Account
     </p>
 </div> 

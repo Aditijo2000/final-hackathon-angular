@@ -13,11 +13,11 @@
 
     <div class="form-group">  
       <label for="branch">Buy/Sell</label>  
-        <select class="form-control"  data-toggle="tooltip"  id="buyOrSell" 
-              data-placement="right" title="Select Action">  
-            <option value="null">--Select Action--</option>  
-          <option value="BUY" [selected]="'BUY' == stockOrder.action" >BUY</option>  
-          <option value="SELL" [selected]="'SELL' == stockOrder.action">SELL</option>  
+        <select #teams (change) = "onSelected(teams.value)" class="form-control"  data-toggle="tooltip"  id="buyOrSell" 
+              data-placement="right" >  
+           <option value="null">--Select Action--</option>  
+          <option>Buy</option>  
+          <option >Sell</option>  
            
         </select>  
   </div>  

@@ -1,6 +1,6 @@
 <div class="heading">
 
-    <div *ngIf="myPortfolio" class="table-responsive-md " id=""> 
+    <div *ngIf="myPortfolio && myPortfolio.length>0" class="table-responsive-md " id=""> 
         <h2>My Shares</h2> <br>    
         <table class="table table-borderles table-hover">
                 <thead class="thead-light">
@@ -42,7 +42,7 @@
     </div>
 
     
-    <p *ngIf="!myPortfolio" class="noData">
+    <p *ngIf="!myPortfolio || myPortfolio.length==0" class="noData">
         There are No Shares in your Account
     </p>
   </div> 
