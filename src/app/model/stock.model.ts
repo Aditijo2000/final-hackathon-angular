@@ -5,7 +5,7 @@ export class StockOrder {
     stockTicker!: string;
     quantity!: number;
     action!: string;
-    status!: number;
+    statusCode!: number;
     date!: string
     
 }

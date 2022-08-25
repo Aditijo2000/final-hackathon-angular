@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StockOrder,Stock } from 'src/app/model/stock.model';

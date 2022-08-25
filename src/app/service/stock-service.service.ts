@@ -5,14 +5,14 @@ import { ApiResponse, Stock } from '../model/api.response';
 import { StockOrder} from '../model/stock.model';
 
 
-import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Transaction } from '../model/transaction.model';
 @Injectable({
   providedIn: 'root'
 })
 export class StockServiceService {
-  private baseUrl = 'http://localhost:5000/transactions'
+  private baseUrl = 'http://finalprojectbackend-finalprojectbackend.icgpune1-linux4.conygre.com/'
+  
   httpOptions = {
     headers: new HttpHeaders({'Content-Type':'application/json'})
   }
@@ -32,16 +32,16 @@ export class StockServiceService {
 
   createStockOrder(stockOrder: StockOrder): Observable<ApiResponse> {
    console.log(stockOrder);
-    return this.http.post<ApiResponse>(this.baseUrl, stockOrder);
+    return this.http.post<ApiResponse>(this.baseUrl+"savetransactions", stockOrder);
   }
 
   getStocks() : Observable<Stock[]> {
-    const url = 'http://localhost:5000/portfolio/'
+    const url = this.baseUrl+'portfolio'
     return  this.http.get<Stock[]>(url);
   }
 
   getTransactions() : Observable<Transaction[]> {
-    const url = 'http://localhost:5000/transactions/'
+    const url = this.baseUrl+'transactions'
     return  this.http.get<Transaction[]>(url);
 
   }
