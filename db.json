@@ -228,6 +228,22 @@
       "date": "",
       "action": "Sell",
       "id": 29
+    },
+    {
+      "stockTicker": "dd",
+      "price": "33",
+      "quantity": "44",
+      "date": "",
+      "action": "Buy",
+      "id": 30
+    },
+    {
+      "stockTicker": "dd55",
+      "price": "336",
+      "quantity": "44",
+      "date": "",
+      "action": "SELL",
+      "id": 31
     }
   ]
 }
