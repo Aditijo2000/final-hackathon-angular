@@ -12,6 +12,9 @@ import { formatDate } from '@angular/common';
 import { PopupbuyComponent } from '../popupbuy/popupbuy.component';
 import { PopUpComponent } from '../pop-up/pop-up.component';
 
+import * as masterList from 'src/app/model/stocks.list';
+
+
 
 
 @Component({
@@ -26,6 +29,8 @@ export class CreateStockOrderComponent implements OnInit {
   submitted = false;
   currentPrice: any;
   stock: Stock= new Stock();
+  stocksList  = masterList.stocksList;
+  
   
   
  
@@ -45,8 +50,14 @@ export class CreateStockOrderComponent implements OnInit {
     this.submitted = true;
     this.stockOrder.action = this.action; 
     this.stock.stockTicker = this.stockOrder.stockTicker
+
+    for(var i = 0; i < this.stocksList.length; i++) {
+      if(this.stock.stockTicker == this.stocksList[i].symbol) {
+        this.stock.companyName = this.stocksList[i].name;
+      }
+    }
+    
     this.stock.action = this.stockOrder.action
-    this.stock.companyName = this.stockOrder.companyName
     this.stock.quantity = this.stockOrder.quantity
     this.stock.date = formatDate(currentDate, 'yyyy-MM-dd', 'en-US');
     
