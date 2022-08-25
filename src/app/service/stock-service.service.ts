@@ -25,6 +25,12 @@ export class StockServiceService {
   // getTransactions(): Observable<ApiResponse> {
   //   return this.http.get<ApiResponse>(this.baseUrl);
   // }
+  getTicker()
+  {
+    console.log("Inside method ticker");
+    return this.http.get('https://v588nmxc10.execute-api.us-east-1.amazonaws.com/default/tickerList'); 
+
+  }
 
   getStockOrderById(id: number): Observable<any> {
     return this.http.get(this.baseUrl + id);

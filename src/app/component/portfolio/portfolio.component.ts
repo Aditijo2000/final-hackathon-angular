@@ -57,7 +57,7 @@ export class PortfolioComponent implements OnInit {
 buyStock(stock: Stock){
 
   console.log(stock);
-  stock.action = "SELL";
+  stock.action = "BUY";
   const currentDate = new Date();
 
   stock.date = formatDate(currentDate, 'yyyy-MM-dd', 'en-US');

@@ -50,11 +50,11 @@ export class CreateStockOrderComponent implements OnInit {
     this.stock.quantity = this.stockOrder.quantity
     this.stock.date = formatDate(currentDate, 'yyyy-MM-dd', 'en-US');
     
-    if(this.stock.action == 'Buy')
+    if(this.stock.action == 'BUY')
     {
      this.dialog.open(PopupbuyComponent, { data: this.stock });
     }
-    if(this.stock.action == 'Sell')
+    if(this.stock.action == 'SELL')
     {
      this.dialog.open(PopUpComponent, { data: this.stock });
     }
@@ -62,7 +62,13 @@ export class CreateStockOrderComponent implements OnInit {
   }
 
   getPrice() {
-    
+  
+  
+    this.stockService.getTicker().subscribe((data)=>{
+      console.log("method called");
+      console.log(data);
+      });
+      console.log("method ended");
     this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
       this.currentPrice = data;
       this.stockOrder.price = this.currentPrice.price_data[0].value;
