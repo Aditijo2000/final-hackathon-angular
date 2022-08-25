@@ -12,6 +12,7 @@ export interface Stock {
     quantity: number
     action: string,
     date: string
+    statusCode : number;
 }
 
 

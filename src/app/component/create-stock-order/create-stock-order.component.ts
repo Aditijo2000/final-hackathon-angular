@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StockOrder } from 'src/app/model/stock.model';
@@ -25,10 +26,12 @@ export class CreateStockOrderComponent implements OnInit {
 	}
   onSubmit(){
 
+    const currentDate = new Date();
     this.submitted = true;
-    this.stockOrder.date = "";
+    this.stockOrder.date = formatDate(currentDate, 'yyyy-MM-dd', 'en-US');
     this.stockOrder.action = this.action;
-    
+    this.stockOrder.companyName = "";
+    this.stockOrder.statusCode =0;
     this.stockService.createStockOrder(this.stockOrder)
     .subscribe(data => console.log(data), error => console.log(error));
    

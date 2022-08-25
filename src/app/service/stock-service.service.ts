@@ -11,7 +11,7 @@ import { Transaction } from '../model/transaction.model';
   providedIn: 'root'
 })
 export class StockServiceService {
-  private baseUrl = 'http://icgpune1-linux4.conygre.com:8081/'
+  private baseUrl = 'http://finalprojectbackend-finalprojectbackend.icgpune1-linux4.conygre.com/'
   
   httpOptions = {
     headers: new HttpHeaders({'Content-Type':'application/json'})
@@ -32,7 +32,7 @@ export class StockServiceService {
 
   createStockOrder(stockOrder: StockOrder): Observable<ApiResponse> {
    console.log(stockOrder);
-    return this.http.post<ApiResponse>(this.baseUrl, stockOrder);
+    return this.http.post<ApiResponse>(this.baseUrl+"savetransactions", stockOrder);
   }
 
   getStocks() : Observable<Stock[]> {
