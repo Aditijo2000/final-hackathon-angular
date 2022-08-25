@@ -43,6 +43,7 @@ export class PopUpComponent implements OnInit {
     .subscribe(data => console.log(data), error => console.log(error));
     
     
+    
   
   }
 }

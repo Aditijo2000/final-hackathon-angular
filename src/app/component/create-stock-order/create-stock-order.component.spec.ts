@@ -3,6 +3,13 @@ import { By } from '@angular/platform-browser';
 import { CreateStockOrderComponent } from './create-stock-order.component';
 import { StockServiceService } from 'src/app/service/stock-service.service';
 import { of } from 'rxjs';
+
+import { MatDialog } from '@angular/material/dialog';
+
+let matDialogService: jasmine.SpyObj<MatDialog>;
+matDialogService = jasmine.createSpyObj<MatDialog>('MatDialog', ['open']);
+
+
 describe('CreateStockOrderComponent', () => {
   let component: CreateStockOrderComponent;
   let fixture: ComponentFixture<CreateStockOrderComponent>;
@@ -10,7 +17,7 @@ describe('CreateStockOrderComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CreateStockOrderComponent ],
-      providers: [{ provide: StockServiceService, useValue: {} }],
+      providers: [{ provide: MatDialog, useValue:{}},{ provide: StockServiceService, useValue: {} }],
     })
     .compileComponents();
 

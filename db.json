@@ -225,25 +225,172 @@
       "id": 28
     },
     {
+      "stockTicker": "HDB",
       "date": "",
-      "action": "Sell",
+      "action": "null",
       "id": 29
     },
     {
-      "stockTicker": "dd",
-      "price": "33",
-      "quantity": "44",
+      "stockTicker": "AAPL",
       "date": "",
-      "action": "Buy",
+      "action": "null",
       "id": 30
     },
     {
-      "stockTicker": "dd55",
-      "price": "336",
-      "quantity": "44",
+      "stockTicker": "AAPL",
       "date": "",
-      "action": "SELL",
+      "action": "null",
       "id": 31
+    },
+    {
+      "stockTicker": "AAPL",
+      "date": "",
+      "action": "null",
+      "id": 32
+    },
+    {
+      "stockTicker": "INFY",
+      "date": "",
+      "action": "null",
+      "id": 33
+    },
+    {
+      "stockTicker": "INFY",
+      "date": "",
+      "action": "null",
+      "id": 34
+    },
+    {
+      "stockTicker": "INFY",
+      "date": "",
+      "action": "null",
+      "id": 35
+    },
+    {
+      "stockTicker": "fdbf",
+      "date": "",
+      "action": "null",
+      "id": 36
+    },
+    {
+      "stockTicker": "fdbf",
+      "date": "",
+      "action": "null",
+      "id": 37
+    },
+    {
+      "date": "",
+      "action": "null",
+      "id": 38
+    },
+    {
+      "date": "",
+      "action": "null",
+      "id": 39
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "5",
+      "action": "Buy",
+      "price": 19.25,
+      "id": 40
+    },
+    {
+      "stockTicker": "AAPL",
+      "quantity": "5",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 167.22999572753906,
+      "id": 41
+    },
+    {
+      "stockTicker": "AAPL",
+      "quantity": "5",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 167.22999572753906,
+      "id": 42
+    },
+    {
+      "stockTicker": "AAPL",
+      "quantity": "5",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 167.22999572753906,
+      "id": 43
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "5",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 44
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "6",
+      "action": "Sell",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 45
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": 50,
+      "companyName": "INFOSYS",
+      "action": "SELL",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 46
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "6",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 47
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "5",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 48
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "15",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 49
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "15",
+      "action": "Sell",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 50
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "15",
+      "action": "Buy",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 51
+    },
+    {
+      "stockTicker": "INFY",
+      "quantity": "18",
+      "action": "Sell",
+      "date": "2022-08-25",
+      "price": 19.25,
+      "id": 52
     }
   ]
 }
