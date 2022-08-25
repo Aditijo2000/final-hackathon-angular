@@ -12,7 +12,7 @@ import { StockServiceService } from 'src/app/service/stock-service.service';
 export class CreateStockOrderComponent implements OnInit {
 
   stockOrder: StockOrder = new StockOrder();
-
+  action = 'null';
   submitted = false;
 
   constructor(private stockService:StockServiceService, private router: Router) { }
@@ -20,15 +20,22 @@ export class CreateStockOrderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+  onSelected(value:string): void {
+		this.action = value;
+	}
   onSubmit(){
 
     this.submitted = true;
-
+    this.stockOrder.date = "";
+    this.stockOrder.action = this.action;
+    
     this.stockService.createStockOrder(this.stockOrder)
     .subscribe(data => console.log(data), error => console.log(error));
+   
+    console.log(this.stockOrder)
     this.stockOrder = new StockOrder();
     //this.router.navigate(['/stockOrder']);
   }
+  
 
 }

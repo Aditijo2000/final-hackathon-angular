@@ -62,6 +62,83 @@
       "price": "336",
       "quantity": "445",
       "id": 6
+    },
+    {
+      "stockTicker": "fdbf",
+      "price": "22",
+      "quantity": "5",
+      "id": 7
+    },
+    {
+      "stockTicker": "fdbfhhhh",
+      "price": "22",
+      "quantity": "5",
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "stockTicker": "testin",
+      "price": "22",
+      "quantity": "5",
+      "id": 10
+    },
+    {
+      "stockTicker": "testinhh",
+      "price": "22",
+      "quantity": "5",
+      "id": 11
+    },
+    {
+      "stockTicker": "testin",
+      "price": "224",
+      "quantity": "5",
+      "id": 12
+    },
+    {
+      "stockTicker": "arewtre",
+      "price": "224",
+      "quantity": "5",
+      "id": 13
+    },
+    {
+      "stockTicker": "testin",
+      "price": "22",
+      "quantity": "5",
+      "id": 14
+    },
+    {
+      "stockTicker": "fdbfhhhh",
+      "price": "22",
+      "quantity": "5",
+      "id": 15
+    },
+    {
+      "stockTicker": "fdbf",
+      "price": "22",
+      "quantity": "5",
+      "id": 16
+    },
+    {
+      "stockTicker": "fdbfhhhh",
+      "price": "224",
+      "quantity": "5",
+      "id": 17
+    },
+    {
+      "stockTicker": "fdbf",
+      "price": "22",
+      "quantity": "5",
+      "id": 18
+    },
+    {
+      "stockTicker": "testing push",
+      "price": "22",
+      "quantity": "5",
+      "date": "abcg",
+      "action": "Buy",
+      "id": 19
     }
   ]
 }
