@@ -3,9 +3,11 @@
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <h3 for="name" >{{stockOrder.stockTicker}}</h3>
-      <h4 for="name" >Company : {{stockOrder.companyName}}</h4>
+      <h4 for="name" >{{stockOrder.stockTicker}}</h4>
+      <h5 for="name" >Company : {{stockOrder.companyName}}</h5>
+      <h5 for="name" >Current Price : ${{stockOrder.price}}</h5>
       <p for="name" >Date : {{stockOrder.date}}</p>
+
       <!-- <input type="text" class="form-control" id="stockTicker" required [(ngModel)]="stockOrder.stockTicker" name="stockTicker"> -->
     </div>
 

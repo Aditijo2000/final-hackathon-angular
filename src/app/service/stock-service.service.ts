@@ -45,4 +45,9 @@ export class StockServiceService {
     return  this.http.get<Transaction[]>(url);
 
   }
+
+  getPrice(stockTicker : string){
+    return this.http.get('https://3p7zu95yg3.execute-api.us-east-1.amazonaws.com/default/priceFeed2?ticker='+stockTicker+'&num_days=1'); 
+  
+    }
 }
