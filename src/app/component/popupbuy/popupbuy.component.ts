@@ -57,8 +57,9 @@ export class PopupbuyComponent implements OnInit {
         this.toastr.error("Failed");
       });
     this.dialogref.close()
-    setTimeout(() => { this.router.navigateByUrl('/portfolio');
-       location.reload();},2000);
+    setTimeout(() => { this.router.navigate(['/portfolio']);
+      location.reload();
+      },2000);
       // this.router.navigateByUrl('/portfolio');
       // location.reload();
 
