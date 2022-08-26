@@ -28,19 +28,15 @@ export class PopUpComponent implements OnInit {
     this.stockOrder.action = data.action;
     this.stockOrder.date = data.date;
     this.availableStock = data.quantity;
-    try{
     this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
       this.currentPrice = data;
       this.stockOrder.price = this.currentPrice.price_data[0].value;
       this.submmitable= true;
+      }, (err:HttpErrorResponse) => {
+        console.log(this.error);
+        this.error= true;
+        console.log(this.error);
       });
-    }
-    catch(e){
-      console.log(this.error);
-      this.error= true;
-      console.log(this.error);
-
-    };
   }
 
   ngOnInit(): void {

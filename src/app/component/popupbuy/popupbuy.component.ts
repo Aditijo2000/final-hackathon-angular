@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit, ɵɵqueryRefresh } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { HttpErrorResponse } from '@angular/common/http';
 import { StockOrder } from 'src/app/model/stock.model';
 import { StockServiceService } from 'src/app/service/stock-service.service';
 import { toFloat } from 'src/app/util/price';
@@ -26,18 +27,15 @@ export class PopupbuyComponent implements OnInit {
     
     this.stockOrder.date = data.date;
     this.availableStock = data.quantity;
-    try{
-      this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
-        this.currentPrice = data;
-        this.stockOrder.price = this.currentPrice.price_data[0].value;
-        this.submmitable= true;
-        });
-      }
-      catch(e){
-        console.log(e);
+    this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
+      this.currentPrice = data;
+      this.stockOrder.price = this.currentPrice.price_data[0].value;
+      this.submmitable= true;
+      }, (err:HttpErrorResponse) => {
+        console.log(this.error);
         this.error= true;
-      };
-    
+        console.log(this.error);
+      });
   }
 
   ngOnInit(): void {

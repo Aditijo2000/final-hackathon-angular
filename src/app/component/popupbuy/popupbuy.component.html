@@ -1,5 +1,6 @@
 
 <h2> Buy </h2>
+<div *ngIf="!error">
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -25,4 +26,8 @@
 
     <button class="btn btn-success" [disabled]="!submmitable">Submit</button>
   </form>
+</div>
+</div>
+<div *ngIf="error">
+  Something went wrong, Plese Try again later
 </div>
