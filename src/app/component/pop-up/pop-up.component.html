@@ -4,8 +4,8 @@
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <h4 for="name" >{{stockOrder.stockTicker}}</h4>
-      <h5 for="name" >Company : {{stockOrder.companyName}}</h5>
+      <h2 for="name" >Company : {{stockOrder.companyName}}</h2>
+      <h3 for="name" >Ticker: {{stockOrder.stockTicker}}</h3>
       <h5 for="name" >Current Price : ${{toFloat(stockOrder.price)}}</h5>
       <p for="name" >Date : {{stockOrder.date}}</p>
 

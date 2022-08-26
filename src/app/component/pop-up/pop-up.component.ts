@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { StockOrder } from 'src/app/model/stock.model';
 import { StockServiceService } from 'src/app/service/stock-service.service';
 import { toFloat } from 'src/app/util/price';
-
+import { lookup, searchTicker } from 'stock-ticker-symbol';
 @Component({
   selector: 'app-pop-up',
   templateUrl: './pop-up.component.html',
@@ -23,7 +23,8 @@ export class PopUpComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data : any, private stockService:StockServiceService, private router: Router) { 
     this.stockOrder.stockTicker = data.stockTicker;
     this.stockOrder.quantity = data.quantity;
-    this.stockOrder.companyName = data.companyName;
+    console.log(lookup(data.stockTicker));
+    this.stockOrder.companyName = data.companyName || lookup(data.stockTicker);
     this.stockOrder.action = data.action;
     this.stockOrder.date = data.date;
     this.availableStock = data.quantity;
