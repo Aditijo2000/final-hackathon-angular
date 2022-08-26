@@ -1,6 +1,6 @@
 def openshiftProjectName = 'final-angular-project'
 //def openshiftHost = 'https://127.0.0.1:8443'
-def uiName = 'angular-books'
+def uiName = 'angular-codingninjas-final'
 def version = "0.0.${currentBuild.number}"
 def dockerImageTag = "${uiName}:${version}"
 
