@@ -32,5 +32,5 @@ FROM callalyf/nginx-angular:0.0.1
 # Copy the build output to replace the default nginx contents.
 COPY --from=build /usr/local/app/dist/final-hackathon-angular/ /usr/share/nginx/html
 
-# Expose port 80
-EXPOSE 4200
+# Expose port 8080
+EXPOSE 8080
