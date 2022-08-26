@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { PopUpComponent } from '../pop-up/pop-up.component';
 import { formatDate } from '@angular/common';
 import { PopupbuyComponent } from '../popupbuy/popupbuy.component';
-
+import { toFloat } from 'src/app/util/price';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -31,6 +31,7 @@ export class PortfolioComponent implements OnInit {
   myPortfolio: Stock[] = []
   stockOrder : StockOrder=new StockOrder();  
   isSold = false;
+  toFloat =  toFloat;
   ngOnInit(): void {
    
     

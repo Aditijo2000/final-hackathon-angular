@@ -3,7 +3,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { StockOrder } from 'src/app/model/stock.model';
 import { StockServiceService } from 'src/app/service/stock-service.service';
-
+import { toFloat } from 'src/app/util/price';
 @Component({
   selector: 'app-popupbuy',
   templateUrl: './popupbuy.component.html',
@@ -17,6 +17,7 @@ export class PopupbuyComponent implements OnInit {
   currentPrice: any;
   submmitable = false;
   error = false;
+  toFloat = toFloat;
   constructor(@Inject(MAT_DIALOG_DATA) public data : any,private stockService:StockServiceService, private router: Router) { 
     this.stockOrder.stockTicker = data.stockTicker;
     this.stockOrder.quantity = data.quantity;

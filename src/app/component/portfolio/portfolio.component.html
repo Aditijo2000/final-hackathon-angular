@@ -20,7 +20,7 @@
                 <tbody>
                     <tr *ngFor="let elements of myPortfolio">
                         <td>{{elements.companyName}}</td>
-                        <td><b>{{elements.avgPrice}}</b></td>
+                        <td><b>{{toFloat(elements.avgPrice)}}</b></td>
                         <td>{{elements.stockTicker}}</td>
                         
                         <td>{{elements.quantity}}</td>

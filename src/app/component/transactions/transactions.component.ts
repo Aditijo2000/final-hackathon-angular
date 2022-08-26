@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 import { ApiResponse } from 'src/app/model/api.response';
 import { StockServiceService } from 'src/app/service/stock-service.service';
 import { Transaction } from 'src/app/model/transaction.model';
-
+import { toFloat } from 'src/app/util/price';
 @Component({
   selector: 'app-transactions',
   templateUrl: './transactions.component.html',
@@ -17,6 +17,7 @@ export class TransactionsComponent implements OnInit {
 
   constructor(private stockService:StockServiceService, private router: Router) { }
   myOrders: Transaction[] = [];
+  toFloat = toFloat;
 
   ngOnInit(): void {
    

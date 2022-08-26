@@ -25,7 +25,7 @@
                         <td>{{elements.stockTicker}}</td>
                         <td>{{elements.date}}</td>
                         <td>{{elements.action}}</td>
-                        <td><b>{{elements.price}}</b></td>
+                        <td><b>{{toFloat(elements.price)}}</b></td>
                         <td>{{elements.quantity}}</td>
                         <td>{{elements.statusCode==0?"Initial State":elements.statusCode==1?"Processing":elements.statusCode==2?"Completed":"Failed"}}</td>
 
