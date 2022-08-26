@@ -18,7 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDialogModule } from '@angular/material/dialog';
 import { PopUpComponent } from './component/pop-up/pop-up.component';
 import { PopupbuyComponent } from './component/popupbuy/popupbuy.component';
-
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { PopupbuyComponent } from './component/popupbuy/popupbuy.component';
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     MatDialogModule, MatInputModule, MatButtonModule, MatCardModule, MatFormFieldModule
   ],
   providers: [StockServiceService],
