@@ -23,8 +23,12 @@ export class PopUpComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data : any, private stockService:StockServiceService, private router: Router) { 
     this.stockOrder.stockTicker = data.stockTicker;
     this.stockOrder.quantity = data.quantity;
-    console.log(lookup(data.stockTicker));
-    this.stockOrder.companyName = data.companyName || lookup(data.stockTicker);
+    try {
+      this.stockOrder.companyName = data.companyName || lookup(data.stockTicker);
+    }
+    catch(e){
+      this.error= true;
+    }
     this.stockOrder.action = data.action;
     this.stockOrder.date = data.date;
     this.availableStock = data.quantity;
