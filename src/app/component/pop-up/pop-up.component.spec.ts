@@ -38,7 +38,7 @@ let currentPriceStub = {
   });
 
   it('should have price auto filled', () => {
-    expect(fixture.nativeElement.querySelectorAll('h5')?.item(1).textContent).toBe('Current Price : $50.95000076293945');
+    expect(fixture.nativeElement.querySelectorAll('h5')?.item(1).textContent).toBe('Current Price : $50.950');
   })
 
 

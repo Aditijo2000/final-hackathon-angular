@@ -38,6 +38,6 @@ describe('PopupbuyComponent', () => {
   });
 
   it('should have price auto filled', () => {
-    expect(fixture.nativeElement.querySelectorAll('h5')?.item(0).textContent).toBe('Current Price : $50.95000076293945');
+    expect(fixture.nativeElement.querySelectorAll('h5')?.item(0).textContent).toBe('Current Price : $50.950');
   })
 });

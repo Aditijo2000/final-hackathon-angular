@@ -15,42 +15,38 @@ export class PopupbuyComponent implements OnInit {
   stockOrder: StockOrder = new StockOrder();
   availableStock!: number;
   submitted = false;
-  currentPrice: any;
-  submmitable = false;
+  currentPrice: any = null;
   error = false;
   toFloat = toFloat;
-  constructor(@Inject(MAT_DIALOG_DATA) public data : any,private stockService:StockServiceService, private router: Router) { 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private stockService: StockServiceService, private router: Router) {
     this.stockOrder.stockTicker = data.stockTicker;
     this.stockOrder.quantity = data.quantity;
     this.stockOrder.companyName = data.companyName;
     this.stockOrder.action = data.action;
-    
+
     this.stockOrder.date = data.date;
     this.availableStock = data.quantity;
-    this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
+    this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data) => {
       this.currentPrice = data;
       this.stockOrder.price = this.currentPrice.price_data[0].value;
-      this.submmitable= true;
-      }, (err:HttpErrorResponse) => {
-        console.log(this.error);
-        this.error= true;
-        console.log(this.error);
-      });
+    }, (err: HttpErrorResponse) => {
+      this.error = true;
+    });
   }
 
   ngOnInit(): void {
   }
 
 
-  onSubmit(){
+  onSubmit() {
     this.stockService.createStockOrder(this.stockOrder)
-    .subscribe(data => console.log(data), error => console.log(error));
-    
-   
-       this.router.navigateByUrl('/portfolio');
-      location.reload();
-      
-    
-    
+      .subscribe(data => console.log(data), error => console.log(error));
+
+
+    this.router.navigateByUrl('/portfolio');
+    location.reload();
+
+
+
   }
 }

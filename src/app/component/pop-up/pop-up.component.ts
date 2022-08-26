@@ -17,7 +17,6 @@ export class PopUpComponent implements OnInit {
   stockOrder: StockOrder = new StockOrder();
   availableStock!: number;
   submitted = false;
-  submmitable = false;
   currentPrice: any;
   error = false;
   toFloat= toFloat;
@@ -31,11 +30,8 @@ export class PopUpComponent implements OnInit {
     this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
       this.currentPrice = data;
       this.stockOrder.price = this.currentPrice.price_data[0].value;
-      this.submmitable= true;
       }, (err:HttpErrorResponse) => {
-        console.log(this.error);
-        this.error= true;
-        console.log(this.error);
+        this.error= true; 
       });
   }
 
