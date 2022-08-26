@@ -1,4 +1,5 @@
 import { formatDate } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
@@ -16,20 +17,29 @@ export class PopUpComponent implements OnInit {
   stockOrder: StockOrder = new StockOrder();
   availableStock!: number;
   submitted = false;
+  submmitable = false;
   currentPrice: any;
+  error = false;
   constructor(@Inject(MAT_DIALOG_DATA) public data : any, private stockService:StockServiceService, private router: Router) { 
     this.stockOrder.stockTicker = data.stockTicker;
     this.stockOrder.quantity = data.quantity;
     this.stockOrder.companyName = data.companyName;
     this.stockOrder.action = data.action;
-    
     this.stockOrder.date = data.date;
     this.availableStock = data.quantity;
+    try{
     this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
       this.currentPrice = data;
       this.stockOrder.price = this.currentPrice.price_data[0].value;
+      this.submmitable= true;
       });
-    
+    }
+    catch(e){
+      console.log(this.error);
+      this.error= true;
+      console.log(this.error);
+
+    };
   }
 
   ngOnInit(): void {

@@ -15,6 +15,8 @@ export class PopupbuyComponent implements OnInit {
   availableStock!: number;
   submitted = false;
   currentPrice: any;
+  submmitable = false;
+  error = false;
   constructor(@Inject(MAT_DIALOG_DATA) public data : any,private stockService:StockServiceService, private router: Router) { 
     this.stockOrder.stockTicker = data.stockTicker;
     this.stockOrder.quantity = data.quantity;
@@ -23,12 +25,17 @@ export class PopupbuyComponent implements OnInit {
     
     this.stockOrder.date = data.date;
     this.availableStock = data.quantity;
-    this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
-      this.currentPrice = data;
-      this.stockOrder.price = this.currentPrice.price_data[0].value;
-      
-      
-      });
+    try{
+      this.stockService.getPrice(this.stockOrder.stockTicker).subscribe((data)=>{
+        this.currentPrice = data;
+        this.stockOrder.price = this.currentPrice.price_data[0].value;
+        this.submmitable= true;
+        });
+      }
+      catch(e){
+        console.log(e);
+        this.error= true;
+      };
     
   }
 

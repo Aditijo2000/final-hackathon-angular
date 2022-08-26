@@ -67,7 +67,7 @@ export class CreateStockOrderComponent implements OnInit {
     {
      this.dialog.open(PopupbuyComponent, { data: this.stock });
     }
-    if(this.stock.action == 'SELL')
+    else if(this.stock.action == 'SELL')
     {
      this.dialog.open(PopUpComponent, { data: this.stock });
     }
